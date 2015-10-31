@@ -1,0 +1,13 @@
+<?php
+
+date_default_timezone_set('Europe/London'); 
+
+require_once __DIR__ . '/../vendor/autoload.php'; 
+
+use Symfony\Component\Console\Application;
+use AppBundle\Command\ScrapeCommand;
+
+
+$app = new Application();
+$app->add(new ScrapeCommand());
+$app->run();
